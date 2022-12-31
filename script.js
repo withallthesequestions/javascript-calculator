@@ -1,23 +1,9 @@
-/* Experiments
+/* To-do:
+ * Implement CE (clear entry) button.
+ * Bug: Calculations stop working when a string ends in double-operators (eg, 3++) */
 
-// Testing display update
-let varName1 = document.getElementsByClassName("displayWindow")[0];
-varName1.innerText = "testing"; 
-
-// Log keypress to console
-document.addEventListener("click", function (event) {
-  console.log(event.target.value);
-}); 
-
-// Log keypress to display
-document.addEventListener("click", function (event) {
-  document.getElementsByClassName("displayWindow")[0].innerText =
-    event.target.value;
-}); */
-
-/* Logic
-  b) Only buttons can be clicked (This is done by making sure only buttons are covered by button classes (mathValues = all numbers and operators, button value "=" = the equals button, which evaluates the string, value = "AC", and value = "CE")
-  f) After you're done running an eval, you want your next click to start a brand-new operation.*/
+/* b) Only buttons can be clicked (This is done by making sure only buttons are covered by button classes (mathValues = all numbers and operators, button value "=" = the equals button, which evaluates the string, value = "AC", and value = "CE")
+   f) After you're done running an eval, you want your next click to start a brand-new operation. */
 
 let inputString = "";
 let displayString = "";
@@ -38,7 +24,6 @@ document.addEventListener("click", function (event) {
   if (event.target.value === "AC") {
     clearEverything();
   }
-  console.log(inputString);
 });
 
 // Fill inputString Function
@@ -64,5 +49,3 @@ function clearEverything() {
   lastButtonPressed = "";
   document.getElementsByClassName("displayWindow")[0].innerText = displayString;
 }
-
-/* To-do: Implement CE (clear entry) */

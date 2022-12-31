@@ -1,0 +1,112 @@
+<!-- Influenced by on https://codepen.io/yeapp/pen/gQYeba -->
+<!-- Color palettes: https://colorhunt.co/palette/0a26471442722052952c74b3 -->
+<!-- https://getbootstrap.com/docs/5.2/layout/grid/#auto-layout-columns -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /*   .col {
+      outline: solid 1px white;
+    } */
+    .btn {
+      width: 4rem;
+    }
+  </style>
+</head>
+
+<body class="text-bg-secondary">
+
+  <!-- Structure
+* Div Container (Card) <div class=container>
+    * Card Body
+      * Div Row: Header <h2 class=>
+    * Div Row: Calculator <div class="row"
+      * Div Row: Calc Display <div class="row">
+      * Div Row: Calc Keypad <div class="row">
+-->
+
+  <div class="container card text-bg-dark mt-5 bg-gradient" style="max-width: 24rem;">
+    <div class="card-body row">
+      <h5 class="header card-title justify-content-center">Josh's Calculator</h5>
+      <div class="displayWindow alert alert-dark text-end mb-4" role="alert">
+        <!-- See script.js for DOM text input -->
+        0
+      </div>
+      <div class="calcKeypad justify-content-center">
+        <div class="row row-cols-4 justify-content-end mb-2">
+          <div class="col d-flex justify-content-center">
+            <button type="button" class="btn btn-secondary" value="AC">AC</button>
+          </div>
+          <div class="col d-flex justify-content-center">
+            <button type="button" class="btn btn-secondary" value="CE">CE</button>
+          </div>
+        </div>
+        <div class="row row-cols-4 align-items-center gy-2">
+          <div class="col d-flex justify-content-center">
+            <button type="button" class="btn btn-secondary mathValues" value="7">7</button>
+          </div>
+          <div class="col d-flex justify-content-center">
+            <button type="button" class="btn btn-secondary mathValues" value="8">8</button>
+          </div>
+          <div class="col d-flex justify-content-center">
+            <button type="button" class="btn btn-secondary mathValues" value="9">9</button>
+          </div>
+          <div class="col d-flex justify-content-center">
+            <button type="button" class="btn btn-secondary mathValues" value="/">/</button>
+          </div>
+          <div class="col d-flex justify-content-center">
+            <button type="button" class="btn btn-secondary mathValues" value="4">4</button>
+          </div>
+          <div class="col d-flex justify-content-center">
+            <button type="button" class="btn btn-secondary mathValues" value="5">5</button>
+          </div>
+          <div class="col d-flex justify-content-center">
+            <button type="button" class="btn btn-secondary mathValues" value="6">6</button>
+          </div>
+          <div class="col d-flex justify-content-center">
+            <button type="button" class="btn btn-secondary mathValues" value="*">x</button>
+          </div>
+          <div class="col d-flex justify-content-center">
+            <button type="button" class="btn btn-secondary mathValues" value="1">1</button>
+          </div>
+          <div class="col d-flex justify-content-center">
+            <button type="button" class="btn btn-secondary mathValues" value="2">2</button>
+          </div>
+          <div class="col d-flex justify-content-center">
+            <button type="button" class="btn btn-secondary mathValues" value="3">3</button>
+          </div>
+          <div class="col d-flex justify-content-center">
+            <button type="button" class="btn btn-secondary mathValues" value="-">-</button>
+          </div>
+          <div class="col d-flex justify-content-center">
+            <button type="button" class="btn btn-secondary mathValues" value="0">0</button>
+          </div>
+          <div class="col d-flex justify-content-center">
+            <button type="button" class="btn btn-secondary mathValues" value=".">.</button>
+          </div>
+          <div class="col d-flex justify-content-center">
+            <button type="button" class="btn btn-secondary" value="=">=</button>
+          </div>
+          <div class="col d-flex justify-content-center">
+            <button type="button" class="btn btn-secondary mathValues" value="+">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+<script src="./script.js"></script>
+
+</html>

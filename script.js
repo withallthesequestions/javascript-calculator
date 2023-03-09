@@ -1,3 +1,5 @@
+// To-do: (a) implement CE button, (b) Implement negative numbers.
+
 const numberButton = document.querySelectorAll(".number");
 const operatorButton = document.querySelectorAll(".operator");
 const acButton = document.querySelectorAll(".ac");
@@ -51,7 +53,7 @@ function setOperator() {
       if (operandOne !== "" && operandTwo === "") {
         operator = event.target.value;
         document.getElementsByClassName("displayWindow2")[0].innerText =
-          operandOne + operator;
+          parseFloat(operandOne) + operator;
         console.log("operator: " + operator);
       }
       if (operandTwo !== "") {

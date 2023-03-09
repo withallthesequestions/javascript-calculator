@@ -22,7 +22,6 @@ function calculator() {
 function setOperandOne() {
   numberButton.forEach((button) => {
     button.addEventListener("click", (event) => {
-      // Step 1: If operandOne is empty, set operandOne
       if (operator === "") {
         operandOne += event.target.value;
         document.getElementsByClassName("displayWindow")[0].innerText =
@@ -36,7 +35,6 @@ function setOperandOne() {
 function setOperandTwo() {
   numberButton.forEach((button) => {
     button.addEventListener("click", (event) => {
-      // Step 3: If operator is set, fill operandTwo
       if (operator !== "") {
         operandTwo += event.target.value;
         document.getElementsByClassName("displayWindow")[0].innerText =
@@ -50,15 +48,12 @@ function setOperandTwo() {
 function setOperator() {
   operatorButton.forEach((button) => {
     button.addEventListener("click", (event) => {
-      // Step 2: If operandOne is set, and operandTwo is empty, set Operator
       if (operandOne !== "" && operandTwo === "") {
         operator = event.target.value;
         document.getElementsByClassName("displayWindow2")[0].innerText =
           operandOne + operator;
-        /* document.getElementsByClassName("displayWindow")[0].innerText = "0"; */
         console.log("operator: " + operator);
       }
-      // Step 4: If operandTwo is set, display `=` and give result.
       if (operandTwo !== "") {
         document.getElementsByClassName("displayWindow2")[0].innerText +=
           operandTwo + event.target.value;
@@ -77,7 +72,6 @@ function getResult() {
             result = eval(parseFloat(operandOne) + parseFloat(operandTwo));
             document.getElementsByClassName("displayWindow")[0].innerText =
               result;
-            // Step 5: Automatically set result as operandOne, and clear operator and operandTwo
             operandOne = result;
             operandTwo = "";
             console.log("res: " + result);
@@ -114,8 +108,6 @@ function getResult() {
   });
 }
 
-/* Done */
-
 acButton.forEach((button) => {
   button.addEventListener("click", () => {
     operandOne = "";
@@ -137,6 +129,5 @@ ceButton.forEach((button) => {
   });
 });
 
-// Display function
 document.getElementsByClassName("displayWindow")[0].innerText = "0";
 document.getElementsByClassName("displayWindow2")[0].innerText = "0";

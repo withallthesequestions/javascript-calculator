@@ -1,5 +1,3 @@
-// To-do: (a) implement CE button, (b) Implement negative numbers, (c) Commas
-
 const numberButton = document.querySelectorAll(".number");
 const operatorButton = document.querySelectorAll(".operator");
 const acButton = document.querySelectorAll(".ac");
